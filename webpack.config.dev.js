@@ -3,8 +3,10 @@ const path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
+  mode: 'development',
   entry: [
-    path.resolve(__dirname, 'src/index')
+    path.resolve(__dirname, 'src/index'),
+    'webpack-hot-middleware/client?reload=true'
   ],
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
@@ -14,6 +16,9 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'src')
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     rules: [
       {test: /\.js$/, include: path.join(__dirname, 'src')},
