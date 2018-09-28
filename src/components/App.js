@@ -1,13 +1,13 @@
 import React from 'react';
-import HomePage from "./home/HomePage";
-import AboutPage from "./about/AboutPage";
+import Header from "./header/Header";
+import Routes from "./Routes";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <HomePage />
-        <AboutPage />
+        <Header />
+        <Routes />
       </div>
     )
   }
