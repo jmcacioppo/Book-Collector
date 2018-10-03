@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./header/Header";
+import SideNavbar from "./side-navbar/SideNavbar";
 import Routes from "./Routes";
 
 class App extends React.Component {
@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="FlexContainer">
-          <Header />
+          <SideNavbar />
           <Routes />
         </div>
       </div>
