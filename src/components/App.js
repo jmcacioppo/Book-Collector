@@ -6,8 +6,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <Routes />
+        <div className="FlexContainer">
+          <Header />
+          <Routes />
+        </div>
       </div>
     )
   }
