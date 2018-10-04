@@ -1,5 +1,4 @@
 @import './constants/colors.scss';
-
 .AppContainer {
   background-color: $primary-background-color;
 }
@@ -13,4 +12,13 @@
 
 .App {
   width: 100%;
+}
+
+hr {
+  width: 80%;
+}
+
+.SectionContainer {
+  margin: 0 auto;
+  width: 80%;
 }
