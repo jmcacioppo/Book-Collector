@@ -1,11 +1,11 @@
 @import './constants/colors.scss';
-
-h1 {
-  color: $primary-color;
+h1.MainTitle {
+  color: $primary-text-color;
+  margin-top: 10px;
 }
 
-h1.MainTitle {
-  margin-top: 10px;
+h3.SectionTitle {
+  color: $secondary-text-color;
 }
 
 .TextCenter {

@@ -2,7 +2,11 @@ import React from 'react';
 
 class Past extends React.Component {
   render() {
-    return <h4>Past</h4>;
+    return (
+      <div className="TextCenter">
+        <h3 className="SectionTitle">Past Books Read</h3>
+      </div>
+    )
   }
 }
 

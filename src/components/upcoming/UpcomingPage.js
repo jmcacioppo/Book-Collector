@@ -2,7 +2,11 @@ import React from 'react';
 
 class Upcoming extends React.Component {
   render() {
-    return <h4>Upcoming</h4>;
+    return (
+      <div className="TextCenter">
+        <h3 className="SectionTitle">Upcoming Books</h3>
+      </div>
+    )
   }
 }
 
