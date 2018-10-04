@@ -3,15 +3,21 @@ import { Link } from 'react-router-dom'
 
 function SideNavbar() {
   function openNav() {
-    let sidenav = document.getElementById('sidenav');
-    console.log(sidenav);
+    document.getElementById("sidenav").style.width = "250px";
+    document.getElementById("routesContainer").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("sidenav").style.width = "0px";
+    document.getElementById("routesContainer").style.marginLeft = "0px";
   }
 
   return (
-    <header className="Navbar">
-      <span onClick={openNav}>&#9776;</span>
-      <nav id="sidenav">
+    <header>
+      <span className="openbtn" onClick={openNav}>&#9776;</span>
+      <nav id="sidenav" className="sidenav">
         <div>
+          <a className="closebtn" onClick={closeNav}>&times;</a>
           <Link to='/'>This Month</Link> <br />
           <Link to='/upcoming'>Upcoming</Link> <br />
           <Link to='/past'>Past</Link> <br />

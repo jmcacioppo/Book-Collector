@@ -1,5 +1,11 @@
+@import './constants/colors.scss';
+
 h1 {
-  color: #888888;
+  color: $primary-color;
+}
+
+h1.MainTitle {
+  margin-top: 10px;
 }
 
 .TextCenter {

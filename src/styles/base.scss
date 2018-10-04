@@ -1,3 +1,9 @@
+@import './constants/colors.scss';
+
+.AppContainer {
+  background-color: $secondary-color;
+}
+
 .FlexContainer {
   display: flex;
   .ColumnContaier {

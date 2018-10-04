@@ -5,8 +5,8 @@ import UpcomingPage from './upcoming/UpcomingPage'
 import PastPage from './past/PastPage'
 
 const Routes = () => (
-  <main className="App">
-    <h1 className="TextCenter">Books Database</h1>
+  <main className="App" id="routesContainer">
+    <h1 className="TextCenter MainTitle">Books Database</h1>
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route path='/upcoming' component={UpcomingPage} />
