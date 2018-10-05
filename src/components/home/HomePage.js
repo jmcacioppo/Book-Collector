@@ -1,5 +1,6 @@
 import React from 'react';
 import Books from "./elements/BooksComponent";
+import ModalComponent from "../resources/modal/ModalComponent";
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
@@ -25,6 +26,9 @@ class Home extends React.Component {
         <h2 className="SectionTitle">{monthToday} Books</h2>
 
         <Books books={this.state.books}/>
+
+        <br />
+        <ModalComponent />
       </section>
     )
   }
