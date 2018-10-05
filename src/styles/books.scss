@@ -1,5 +1,12 @@
 .BooksContainer {
-  border: 1px black solid;
   display: flex;
   justify-content: space-evenly;
+}
+
+.BookContainer {
+  background-color: white;
+  border: 1px black solid;
+  height: 250px;
+  padding: 5px;
+  width: 175px;
 }

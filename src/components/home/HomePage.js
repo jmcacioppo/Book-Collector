@@ -1,4 +1,5 @@
 import React from 'react';
+import Books from "./elements/BooksComponent";
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
@@ -11,8 +12,9 @@ class Home extends React.Component {
 
     this.state = {
       books: [
-        { key: 0, name: 'YDKJS', category: 'development', author: 'Kyle Simpson' }, 
-        { key: 1, name: 'Total Money Makeover', category: 'money', author: 'Dave Ramsey' }
+        { key: 0, name: `You Don't Know JS`, category: 'development', author: 'Kyle Simpson' }, 
+        { key: 1, name: 'Total Money Makeover', category: 'money', author: 'Dave Ramsey' },
+        { key: 2, name: 'The 7 Habits of Highly Effective People', category: 'professional', author: 'Stephen Covey' }
       ]
     }
   }
@@ -20,40 +22,12 @@ class Home extends React.Component {
   render() {
     return (
       <section className="TextCenter SectionContainer">
-        <h3 className="SectionTitle">{monthToday} Books</h3>
+        <h2 className="SectionTitle">{monthToday} Books</h2>
 
         <Books books={this.state.books}/>
       </section>
     )
   }
-}
-
-class Books extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      bookItems: this.props.books.map((item) => <Book book={item} key={item.key}/>)
-    }
-  }
-
-  render() {
-    return (
-      <div className="BooksContainer">
-        {this.state.bookItems}
-      </div>
-    )
-  }
-}
-
-const Book = ({ book }) => {
-  return (
-    <div className="BookContainer">
-      <p>Book Title: {book.name}</p>
-      <p>Author: {book.author}</p>
-      <p>Category: {book.category}</p>
-    </div>
-  )
 }
 
 export default Home;
