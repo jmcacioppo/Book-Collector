@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 class ModalComponent extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);

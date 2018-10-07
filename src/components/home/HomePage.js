@@ -1,6 +1,7 @@
 import React from 'react';
 import Books from "./elements/BooksComponent";
-import ModalComponent from "../resources/modal/ModalComponent";
+import SelectBook from "./elements/SelectBookComponent";
+import ModalComponent from "../resources/elements/ModalComponent";
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
@@ -20,18 +21,19 @@ class Home extends React.Component {
       modalBody: this.modalBody()
     }
   }
-
+  
   modalBody() {
     return (
       <div>
         <h4>Book List:</h4>
         <p>This is a list.</p>
+        <SelectBook></SelectBook>
       </div>
     )
   }
 
   handleAddBook() {
-    console.log('testing');
+    console.log('Add this book!');
   }
   
   render() {
