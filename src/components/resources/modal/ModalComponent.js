@@ -7,6 +7,7 @@ class ModalComponent extends React.Component {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleAction = this.handleAction.bind(this);
 
     this.state = {
       show: false
@@ -21,25 +22,26 @@ class ModalComponent extends React.Component {
     this.setState({ show: true });
   }
   
+  handleAction() {
+    this.props.action();
+    this.handleClose();
+  }
+  
   render() {
     return (
       <div>
-        <Button onClick={this.handleShow}>
-          Add Book
-        </Button>
+        <Button onClick={this.handleShow}>{this.props.openButtonText}</Button>
         
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Add Book</Modal.Title>
+            <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
 
-          <Modal.Body>
-            <h4>Book List:</h4>
-            <p>This is a list.</p>
-          </Modal.Body>
+          <Modal.Body>{this.props.body}</Modal.Body>
 
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
+            <Button onClick={this.handleAction}>{this.props.actionText}</Button>
           </Modal.Footer>
         </Modal>
       </div>

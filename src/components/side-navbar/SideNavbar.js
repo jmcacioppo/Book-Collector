@@ -18,7 +18,7 @@ function SideNavbar() {
       <nav id="sidenav" className="sidenav">
         <div>
           <a className="closebtn" onClick={closeNav}>&times;</a>
-          <Link to='/'>This Month</Link> <br />
+          <Link to='/'>Current</Link> <br />
           <Link to='/upcoming'>Upcoming</Link> <br />
           <Link to='/past'>Past</Link> <br />
         </div>

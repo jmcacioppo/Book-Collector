@@ -16,8 +16,22 @@ class Home extends React.Component {
         { key: 0, name: `You Don't Know JS`, category: 'development', author: 'Kyle Simpson' }, 
         { key: 1, name: 'Total Money Makeover', category: 'money', author: 'Dave Ramsey' },
         { key: 2, name: 'The 7 Habits of Highly Effective People', category: 'professional', author: 'Stephen Covey' }
-      ]
+      ],
+      modalBody: this.modalBody()
     }
+  }
+
+  modalBody() {
+    return (
+      <div>
+        <h4>Book List:</h4>
+        <p>This is a list.</p>
+      </div>
+    )
+  }
+
+  handleAddBook() {
+    console.log('testing');
   }
   
   render() {
@@ -28,7 +42,12 @@ class Home extends React.Component {
         <Books books={this.state.books}/>
 
         <br />
-        <ModalComponent />
+        <ModalComponent 
+          openButtonText={'Add Book'} 
+          title={'Add Book'} 
+          body={this.state.modalBody} 
+          actionText={'Add Book'}
+          action={this.handleAddBook}/>
       </section>
     )
   }
