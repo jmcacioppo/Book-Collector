@@ -5,8 +5,17 @@
 
 .FlexContainer {
   display: flex;
+  .Bottom {
+    align-self: flex-end;
+  }
   .ColumnContaier {
     flex-direction: column;
+  }
+  .SpaceEvenly {
+    justify-content: space-evenly;
+  }
+  .VerticalCenter {
+    align-items: center;
   }
 }
 

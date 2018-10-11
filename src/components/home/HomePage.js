@@ -3,8 +3,7 @@ import Books from "./elements/BooksComponent";
 import SelectBook from "./elements/SelectBookComponent";
 import ModalComponent from "../resources/elements/ModalComponent";
 
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"];
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let today = new Date();
 let monthToday = monthNames[today.getMonth()];
 
@@ -26,7 +25,7 @@ class Home extends React.Component {
     return (
       <div>
         <h4>Book List:</h4>
-        <p>This is a list.</p>
+        <p>Select the book you'd like to add.</p>
         <SelectBook></SelectBook>
       </div>
     )
