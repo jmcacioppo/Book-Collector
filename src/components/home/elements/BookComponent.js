@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const Book = ({ book }) => {
+const Book = ({ book, removeBook, finishedBook }) => {
+  let handleRemoveBook = (book) => removeBook(book);
+  let handleFinishedBook = (book) => finishedBook(book);
+  
   return (
     <div className="BookContainer VerticalCenter">
       <p><strong>{book.name}</strong></p>
@@ -9,8 +12,8 @@ const Book = ({ book }) => {
       <p>Category: {book.category}</p>
 
       <div className="FlexContainer SpaceEvenly Bottom">
-        <Button bsStyle="warning">Remove</Button>
-        <Button bsStyle="success">Finished</Button>
+        <Button bsStyle="warning" onClick={handleRemoveBook.bind(null, book)}>Remove</Button>
+        <Button bsStyle="success" onClick={handleFinishedBook.bind(null, book)}>Finished</Button>
       </div>
     </div>
   )

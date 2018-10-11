@@ -6,7 +6,7 @@ class Books extends React.Component {
     super(props);
 
     this.state = {
-      bookItems: this.props.books.map((item) => <Book book={item} key={item.key} />)
+      bookItems: this.props.books.map((book) => <Book book={book} key={book.key} removeBook={this.props.removeBook} finishedBook={this.props.finishedBook} />)
     }
   }
 

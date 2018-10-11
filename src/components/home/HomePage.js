@@ -31,6 +31,14 @@ class Home extends React.Component {
     )
   }
 
+  handleRemoveBook(book) {
+    console.log(`Are you sure you want to remove ${book.name}?`);
+  }
+  
+  handleFinishedBook(book) {
+    console.log(`Are you sure you have finished ${book.name}?`);
+  }
+
   handleAddBook() {
     console.log('Add this book!');
   }
@@ -40,7 +48,7 @@ class Home extends React.Component {
       <section className="TextCenter SectionContainer">
         <h2 className="SectionTitle">{monthToday} Books</h2>
 
-        <Books books={this.state.books}/>
+        <Books books={this.state.books} removeBook={this.handleRemoveBook} finishedBook={this.handleFinishedBook}/>
 
         <br />
         <ModalComponent 
