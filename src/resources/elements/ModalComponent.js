@@ -30,7 +30,7 @@ class ModalComponent extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.handleShow}>{this.props.openButtonText}</Button>
+        <Button bsStyle={this.props.bsStyle} onClick={this.handleShow}>{this.props.openButtonText}</Button>
         
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
@@ -41,7 +41,7 @@ class ModalComponent extends React.Component {
 
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
-            <Button onClick={this.handleAction}>{this.props.actionText}</Button>
+            <Button onClick={this.handleAction} bsStyle='primary'>{this.props.actionText}</Button>
           </Modal.Footer>
         </Modal>
       </div>

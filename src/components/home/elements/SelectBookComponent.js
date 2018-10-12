@@ -1,5 +1,5 @@
 import React from 'react';
-import DropdownComponent from "../../resources/elements/DropdownComponent";
+import DropdownComponent from "../../../resources/elements/DropdownComponent";
 
 class SelectBook extends React.Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Books from "./elements/BooksComponent";
 import SelectBook from "./elements/SelectBookComponent";
-import ModalComponent from "../resources/elements/ModalComponent";
+import ModalComponent from "../../resources/elements/ModalComponent";
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let today = new Date();
@@ -24,7 +24,6 @@ class Home extends React.Component {
   modalBody() {
     return (
       <div>
-        <h4>Book List:</h4>
         <p>Select the book you'd like to add.</p>
         <SelectBook></SelectBook>
       </div>
@@ -32,15 +31,15 @@ class Home extends React.Component {
   }
 
   handleRemoveBook(book) {
-    console.log(`Are you sure you want to remove ${book.name}?`);
+    console.log(`Removing ${book.name}`);
   }
   
   handleFinishedBook(book) {
-    console.log(`Are you sure you have finished ${book.name}?`);
+    console.log(`Finishing ${book.name}`);
   }
 
   handleAddBook() {
-    console.log('Add this book!');
+    console.log('Add this book');
   }
   
   render() {
@@ -51,6 +50,7 @@ class Home extends React.Component {
         <Books books={this.state.books} removeBook={this.handleRemoveBook} finishedBook={this.handleFinishedBook}/>
 
         <br />
+
         <ModalComponent 
           openButtonText={'Add Book'} 
           title={'Add Book'} 
