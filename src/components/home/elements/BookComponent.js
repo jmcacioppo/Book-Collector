@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import ModalComponent from "../../../resources/elements/ModalComponent";
 
 const Book = ({ book, removeBook, finishedBook }) => {

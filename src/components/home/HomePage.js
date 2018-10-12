@@ -22,10 +22,12 @@ class Home extends React.Component {
   }
   
   modalBody() {
+    const options = ['Example 1', 'Example 2', 'Example 3'];
+
     return (
       <div>
         <p>Select the book you'd like to add.</p>
-        <SelectBook></SelectBook>
+        <SelectBook options={options}></SelectBook>
       </div>
     )
   }
@@ -39,7 +41,7 @@ class Home extends React.Component {
   }
 
   handleAddBook() {
-    console.log('Add this book');
+    console.log(`Add ${this.selectedBook}`);
   }
   
   render() {

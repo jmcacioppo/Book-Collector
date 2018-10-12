@@ -1,24 +1,23 @@
 import React from 'react';
-import { ButtonToolbar, DropdownButton, MenuItem } from 'react-bootstrap';
+import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 
-class DropdownComponent extends React.Component {
-  constructor(props) {
-    super(props);
+const DropdownComponent = ({ options }) => {
+  let inputElement = '';
+  let renderOptions = options.map((title, i) => <option key={i}>{title}</option>);
 
-    this.renderDropdownOptions = this.props.options.map((title, i) => <MenuItem key={i}>{title}</MenuItem>);
+  let setValue = () => {
+    // this.props.value = this.inputElement.value;
+    console.log(inputElement.value);
   }
   
-  render() {
-    return (
-      <ButtonToolbar>
-        <DropdownButton
-          title={this.props.title}
-          id={`dropdown`}>
-          {this.renderDropdownOptions}
-        </DropdownButton>
-      </ButtonToolbar>
-    );
-  }
+  return (
+    <FormGroup controlId="formControlsSelect">
+      <ControlLabel>Select</ControlLabel>
+      <FormControl onChange={setValue} inputRef={element => inputElement = element} componentClass="select">
+        {renderOptions}
+      </FormControl>
+    </FormGroup>
+  );
 }
 
 export default DropdownComponent
