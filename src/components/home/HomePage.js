@@ -17,17 +17,20 @@ class Home extends React.Component {
         { key: 1, name: 'Total Money Makeover', category: 'money', author: 'Dave Ramsey' },
         { key: 2, name: 'The 7 Habits of Highly Effective People', category: 'professional', author: 'Stephen Covey' }
       ],
-      modalBody: this.modalBody()
+      modalBody: this.modalBody(),
+      selectedBook: {}
     }
   }
   
   modalBody() {
     const options = ['Example 1', 'Example 2', 'Example 3'];
 
+    let setSelectedBook = (book) => this.setState({selectedBook: book});
+
     return (
       <div>
         <p>Select the book you'd like to add.</p>
-        <SelectBook options={options}></SelectBook>
+        <SelectBook options={options} setSelectedBook={setSelectedBook}></SelectBook>
       </div>
     )
   }
@@ -41,7 +44,7 @@ class Home extends React.Component {
   }
 
   handleAddBook() {
-    console.log(`Add ${this.selectedBook}`);
+    console.log(this.state.selectedBook);
   }
   
   render() {
@@ -58,7 +61,7 @@ class Home extends React.Component {
           title={'Add Book'} 
           body={this.state.modalBody} 
           actionText={'Add Book'}
-          action={this.handleAddBook}/>
+          action={this.handleAddBook.bind(this)}/>
       </section>
     )
   }
