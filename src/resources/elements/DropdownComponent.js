@@ -3,9 +3,9 @@ import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 
 const DropdownComponent = ({ options, setSelectedBook }) => {
   let inputElement = '';
-  let renderedOptions = options.map((title, i) => <option key={i}>{title}</option>);
+  const renderedOptions = options.map((title, i) => <option key={i}>{title}</option>);
   
-  let setValue = () => setSelectedBook(inputElement.value);
+  const setValue = () => setSelectedBook(inputElement.value);
   
   return (
     <FormGroup controlId="formControlsSelect">
