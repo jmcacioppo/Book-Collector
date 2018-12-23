@@ -40,7 +40,7 @@ class ModalComponent extends React.Component {
           <Modal.Body>{this.props.body}</Modal.Body>
 
           <Modal.Footer>
-            <Button onClick={this.handleClose}>Close</Button>
+            <Button onClick={this.handleClose}>Cancel</Button>
             <Button onClick={this.handleAction} bsStyle='primary'>{this.props.actionText}</Button>
           </Modal.Footer>
         </Modal>

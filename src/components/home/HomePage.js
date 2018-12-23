@@ -4,13 +4,13 @@ import SelectBook from "./elements/SelectBookComponent";
 import ModalComponent from "../../resources/elements/ModalComponent";
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let today = new Date();
-let monthToday = monthNames[today.getMonth()];
+const today = new Date();
+const monthToday = monthNames[today.getMonth()];
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       books: [
         { key: 0, name: `You Don't Know JS`, category: 'development', author: 'Kyle Simpson' }, 
@@ -25,7 +25,7 @@ class Home extends React.Component {
   modalBody() {
     const options = ['Example 1', 'Example 2', 'Example 3'];
 
-    let setSelectedBook = (book) => this.setState({selectedBook: book});
+    let setSelectedBook = (selectedBook) => this.setState({ selectedBook });
 
     return (
       <div>
@@ -44,7 +44,7 @@ class Home extends React.Component {
   }
 
   handleAddBook() {
-    console.log(this.state.selectedBook);
+    console.log(`Adding ${this.state.selectedBook}`);
   }
   
   render() {

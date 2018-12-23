@@ -2,11 +2,11 @@ import React from 'react';
 import ModalComponent from "../../../resources/elements/ModalComponent";
 
 const Book = ({ book, removeBook, finishedBook }) => {
-  let handleRemoveBook = (book) => removeBook(book);
-  let handleFinishedBook = (book) => finishedBook(book);
+  const handleRemoveBook = (book) => removeBook(book);
+  const handleFinishedBook = (book) => finishedBook(book);
   
-  let removeBookModalBody = <div>Are you sure you want to remove <strong>{book.name}</strong>?</div>
-  let finishedBookModalBody = <div>Are you sure you have finished <strong>{book.name}</strong>?</div>
+  const removeBookModalBody = <div>Are you sure you want to remove <strong>{book.name}</strong>?</div>
+  const finishedBookModalBody = <div>Are you sure you have finished <strong>{book.name}</strong>?</div>
 
   return (
     <div className="BookContainer VerticalCenter">

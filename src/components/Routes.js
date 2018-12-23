@@ -6,7 +6,7 @@ import PastPage from './past/PastPage'
 
 const Routes = () => (
   <main className="App" id="routesContainer">
-    <h1 className="TextCenter MainTitle">Books Database</h1>
+    <h1 className="TextCenter MainTitle">Books Collector</h1>
     <hr />
     <Switch>
       <Route exact path='/' component={HomePage} />
