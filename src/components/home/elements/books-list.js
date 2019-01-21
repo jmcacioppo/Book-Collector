@@ -1,7 +1,7 @@
 import React from 'react';
-import Book from "./BookComponent";
+import Book from "./book";
 
-class Books extends React.Component {
+class BooksList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,4 +19,4 @@ class Books extends React.Component {
   }
 }
 
-export default Books;
+export default BooksList;

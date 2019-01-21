@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function SideNavbar() {
+function SideNav() {
   function openNav() {
     document.getElementById("sidenav").style.width = "250px";
     document.getElementById("routesContainer").style.marginLeft = "250px";
@@ -27,4 +27,4 @@ function SideNavbar() {
   )
 }
 
-export default SideNavbar
+export default SideNav

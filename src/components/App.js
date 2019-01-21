@@ -1,13 +1,13 @@
 import React from 'react';
-import SideNavbar from "./side-navbar/SideNavbar";
-import Routes from "./Routes";
+import SideNav from "./side-nav/side-nav";
+import Routes from "./routes";
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <div className="FlexContainer">
-          <SideNavbar />
+          <SideNav />
           <Routes />
         </div>
       </div>

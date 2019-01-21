@@ -1,7 +1,7 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
 
-const AccordionComponent = ({ eventKey, title, items }) => {
+const Accordion = ({ eventKey, title, items }) => {
   const renderedItems = items.map((item, i) => <div key={i}>{item}</div>);  
 
   return (
@@ -16,4 +16,4 @@ const AccordionComponent = ({ eventKey, title, items }) => {
   );
 }
 
-export default AccordionComponent
+export default Accordion

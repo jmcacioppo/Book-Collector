@@ -1,17 +1,17 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import HomePage from './home/HomePage'
-import UpcomingPage from './upcoming/UpcomingPage'
-import PastPage from './past/PastPage'
+import Home from './home/home'
+import Upcoming from './upcoming/upcoming'
+import Past from './past/past'
 
 const Routes = () => (
   <main className="App" id="routesContainer">
-    <h1 className="TextCenter MainTitle">Books Collector</h1>
+    <h1 className="TextCenter MainTitle">Book Collector</h1>
     <hr />
     <Switch>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/upcoming' component={UpcomingPage} />
-      <Route path='/past' component={PastPage} />
+      <Route exact path='/' component={Home} />
+      <Route path='/upcoming' component={Upcoming} />
+      <Route path='/past' component={Past} />
     </Switch>
   </main>
 )

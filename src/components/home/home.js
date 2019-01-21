@@ -1,7 +1,7 @@
 import React from 'react';
-import Books from "./elements/BooksComponent";
-import SelectBook from "./elements/SelectBookComponent";
-import ModalComponent from "../../resources/elements/ModalComponent";
+import BooksList from "./elements/books-list";
+import SelectBook from "./elements/select-book";
+import ModalSection from "../../resources/elements/modal-section";
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const today = new Date();
@@ -52,11 +52,11 @@ class Home extends React.Component {
       <section className="TextCenter SectionContainer">
         <h2 className="SectionTitle">{monthToday} Books</h2>
 
-        <Books books={this.state.books} removeBook={this.handleRemoveBook} finishedBook={this.handleFinishedBook}/>
+        <BooksList books={this.state.books} removeBook={this.handleRemoveBook} finishedBook={this.handleFinishedBook}/>
 
         <br />
 
-        <ModalComponent 
+        <ModalSection 
           openButtonText={'Add Book'} 
           title={'Add Book'} 
           body={this.state.modalBody} 

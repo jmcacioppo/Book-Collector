@@ -1,5 +1,5 @@
 import React from 'react';
-import AccordionSectionComponent from "../../resources/elements/AccordionSectionComponent";
+import AccordionSection from "../../resources/elements/accordion-section";
 
 class Upcoming extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Upcoming extends React.Component {
       <section className="TextCenter SectionContainer">
         <h3 className="SectionTitle">Upcoming Books</h3>
 
-        <AccordionSectionComponent panels={panels}></AccordionSectionComponent>
+        <AccordionSection panels={panels}></AccordionSection>
       </section>
     )
   }
