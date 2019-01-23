@@ -1,6 +1,6 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import BooksList from './elements/books-list';
+import React from "react";
+import { Button } from "react-bootstrap";
+import BooksList from "./elements/books-list";
 
 class Past extends React.Component {
   render() {
@@ -15,9 +15,9 @@ class Past extends React.Component {
         <br />
         <br />
 
-        <BooksList></BooksList>
+        <BooksList />
       </section>
-    )
+    );
   }
 }
 

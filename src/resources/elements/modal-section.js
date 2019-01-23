@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import React from "react";
+import { Button, Modal } from "react-bootstrap";
 
 class ModalSection extends React.Component {
   constructor(props) {
@@ -21,17 +21,19 @@ class ModalSection extends React.Component {
   handleShow() {
     this.setState({ show: true });
   }
-  
+
   handleAction() {
     this.props.action();
     this.handleClose();
   }
-  
+
   render() {
     return (
       <div>
-        <Button bsStyle={this.props.bsStyle} onClick={this.handleShow}>{this.props.openButtonText}</Button>
-        
+        <Button bsStyle={this.props.bsStyle} onClick={this.handleShow}>
+          {this.props.openButtonText}
+        </Button>
+
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>{this.props.title}</Modal.Title>
@@ -41,12 +43,14 @@ class ModalSection extends React.Component {
 
           <Modal.Footer>
             <Button onClick={this.handleClose}>Cancel</Button>
-            <Button onClick={this.handleAction} bsStyle='primary'>{this.props.actionText}</Button>
+            <Button onClick={this.handleAction} bsStyle="primary">
+              {this.props.actionText}
+            </Button>
           </Modal.Footer>
         </Modal>
       </div>
-    )
+    );
   }
 }
 
-export default ModalSection
+export default ModalSection;
