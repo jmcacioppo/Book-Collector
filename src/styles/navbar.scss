@@ -9,38 +9,42 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+
+  > .nav-button--close {
+    color: #818181;
+    cursor: pointer;
+    display: block;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+    position: absolute;
+    right: 25px;
+    text-decoration: none;
+    top: 0;
+    transition: 0.3s;
+  }
+
+  > .nav-button--close:hover {
+    color: #f3f3f3;
+  }
+
+  > .link-text {
+    color: #f3f3f3;
+    font-size: 25px;
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  > .link-text:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  cursor: pointer;
-  font-size: 36px;
-  margin-left: 50px;
-  position: absolute;
-  right: 25px;
-  top: 0;
-}
-
-.openbtn {
+.nav-button--open {
   cursor: pointer;
   font-size: 36px;
   padding: 10px;
-}
-
-#routesContainer {
-  transition: margin-left 0.5s;
 }
 
 @media screen and (max-height: 450px) {

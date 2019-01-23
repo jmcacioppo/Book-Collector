@@ -14,18 +14,25 @@ function SideNav() {
 
   return (
     <header>
-      <span className="openbtn" onClick={openNav}>
+      <span className="nav-button--open" onClick={openNav}>
         &#9776;
       </span>
       <nav id="sidenav" className="sidenav">
-        <div>
-          <a className="closebtn" onClick={closeNav}>
-            &times;
-          </a>
-          <Link to="/">Current</Link> <br />
-          <Link to="/upcoming">Upcoming</Link> <br />
-          <Link to="/past">Past</Link> <br />
-        </div>
+        <a className="nav-button--close" onClick={closeNav}>
+          &times;
+        </a>
+        <Link className="link-text" to="/">
+          Current
+        </Link>{" "}
+        <br />
+        <Link className="link-text" to="/upcoming">
+          Upcoming
+        </Link>{" "}
+        <br />
+        <Link className="link-text" to="/past">
+          Past
+        </Link>{" "}
+        <br />
       </nav>
     </header>
   );

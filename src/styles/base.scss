@@ -8,7 +8,7 @@
   .Bottom {
     align-self: flex-end;
   }
-  .ColumnContaier {
+  .ColumnContainer {
     flex-direction: column;
   }
   .SpaceEvenly {
@@ -20,6 +20,7 @@
 }
 
 .App {
+  transition: margin-left 0.5s;
   width: 100%;
 }
 
