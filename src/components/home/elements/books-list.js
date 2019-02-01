@@ -1,5 +1,5 @@
-import React from "react";
-import Book from "./book";
+import React from 'react';
+import Book from './book';
 
 class BooksList extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class BooksList extends React.Component {
           removeBook={this.props.removeBook}
           finishedBook={this.props.finishedBook}
         />
-      ))
+      )),
     };
   }
 

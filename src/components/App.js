@@ -1,6 +1,6 @@
-import React from "react";
-import SideNav from "./side-nav/side-nav";
-import Routes from "./routes";
+import React from 'react';
+import SideNav from './side-nav/side-nav';
+import Routes from './routes';
 
 class App extends React.Component {
   render() {

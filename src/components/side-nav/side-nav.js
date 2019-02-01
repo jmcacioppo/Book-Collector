@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SideNav() {
   function openNav() {
-    document.getElementById("sidenav").style.width = "250px";
-    document.getElementById("routesContainer").style.marginLeft = "250px";
+    document.getElementById('sidenav').style.width = '250px';
+    document.getElementById('routesContainer').style.marginLeft = '250px';
   }
 
   function closeNav() {
-    document.getElementById("sidenav").style.width = "0px";
-    document.getElementById("routesContainer").style.marginLeft = "0px";
+    document.getElementById('sidenav').style.width = '0px';
+    document.getElementById('routesContainer').style.marginLeft = '0px';
   }
 
   return (
@@ -23,15 +23,15 @@ function SideNav() {
         </a>
         <Link className="link-text" to="/">
           Current
-        </Link>{" "}
+        </Link>{' '}
         <br />
         <Link className="link-text" to="/upcoming">
           Upcoming
-        </Link>{" "}
+        </Link>{' '}
         <br />
         <Link className="link-text" to="/past">
           Past
-        </Link>{" "}
+        </Link>{' '}
         <br />
       </nav>
     </header>

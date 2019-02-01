@@ -1,5 +1,5 @@
-import React from "react";
-import ModalSection from "../../../resources/elements/modal-section";
+import React from 'react';
+import ModalSection from '../../../resources/elements/modal-section';
 
 const Book = ({ book, removeBook, finishedBook }) => {
   const handleRemoveBook = book => removeBook(book);
@@ -27,19 +27,19 @@ const Book = ({ book, removeBook, finishedBook }) => {
       <div className="FlexContainer SpaceEvenly Bottom">
         <ModalSection
           bsStyle="warning"
-          openButtonText={"Remove"}
-          title={"Remove Book"}
+          openButtonText={'Remove'}
+          title={'Remove Book'}
           body={removeBookModalBody}
-          actionText={"Remove Book"}
+          actionText={'Remove Book'}
           action={handleRemoveBook.bind(null, book)}
         />
 
         <ModalSection
           bsStyle="success"
-          openButtonText={"Finished"}
-          title={"Finished Book"}
+          openButtonText={'Finished'}
+          title={'Finished Book'}
           body={finishedBookModalBody}
-          actionText={"Finished Book"}
+          actionText={'Finished Book'}
           action={handleFinishedBook.bind(null, book)}
         />
       </div>
