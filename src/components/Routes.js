@@ -5,8 +5,8 @@ import Upcoming from './upcoming/upcoming';
 import Past from './past/past';
 
 const Routes = () => (
-  <main className="App" id="routesContainer">
-    <h1 className="TextCenter MainTitle">Book Collector</h1>
+  <main className="app" id="routesContainer">
+    <h1 className="text-center app__header">Book Collector</h1>
     <hr />
     <Switch>
       <Route exact path="/" component={Home} />

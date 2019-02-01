@@ -77,8 +77,8 @@ class Home extends React.Component {
 
   render() {
     return (
-      <section className="TextCenter SectionContainer">
-        <h2 className="SectionTitle">{monthToday} Books</h2>
+      <section className="text-center section">
+        <h2 className="section__header">{monthToday} Books</h2>
 
         <BooksList
           books={this.state.books}

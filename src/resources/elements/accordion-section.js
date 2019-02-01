@@ -1,6 +1,6 @@
-import React from "react";
-import { PanelGroup } from "react-bootstrap";
-import Accordion from "./accordion";
+import React from 'react';
+import { PanelGroup } from 'react-bootstrap';
+import Accordion from './accordion';
 
 const AccordionSection = ({ panels }) => {
   const renderedAccordionSection = panels.map((panel, i) => (

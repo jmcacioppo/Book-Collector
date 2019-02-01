@@ -19,8 +19,8 @@ class Upcoming extends React.Component {
     ];
 
     return (
-      <section className="TextCenter SectionContainer">
-        <h3 className="SectionTitle">Upcoming Books</h3>
+      <section className="text-center section">
+        <h3 className="section__header">Upcoming Books</h3>
 
         <AccordionSection panels={panels} />
       </section>

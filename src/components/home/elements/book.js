@@ -17,14 +17,14 @@ const Book = ({ book, removeBook, finishedBook }) => {
   );
 
   return (
-    <div className="BookContainer VerticalCenter">
+    <div className="book">
       <p>
         <strong>{book.name}</strong>
       </p>
       <p>By: {book.author}</p>
       <p>Category: {book.category}</p>
 
-      <div className="FlexContainer SpaceEvenly Bottom">
+      <div className="flex flex--space-evenly">
         <ModalSection
           bsStyle="warning"
           openButtonText={'Remove'}

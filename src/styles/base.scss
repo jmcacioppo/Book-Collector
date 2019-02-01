@@ -1,34 +1,26 @@
 @import './constants/colors.scss';
-.AppContainer {
+.body {
   background-color: $primary-background-color;
 }
 
-.FlexContainer {
-  display: flex;
-  .Bottom {
-    align-self: flex-end;
-  }
-  .ColumnContainer {
-    flex-direction: column;
-  }
-  .SpaceEvenly {
-    justify-content: space-evenly;
-  }
-  .VerticalCenter {
-    align-items: center;
-  }
-}
-
-.App {
+.app {
   transition: margin-left 0.5s;
   width: 100%;
 }
 
-hr {
+.flex {
+  display: flex;
+
+  &--space-evenly {
+    justify-content: space-evenly;
+  }
+}
+
+.section {
+  margin: 0 auto;
   width: 80%;
 }
 
-.SectionContainer {
-  margin: 0 auto;
+hr {
   width: 80%;
 }

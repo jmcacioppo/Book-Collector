@@ -1,5 +1,5 @@
-import React from "react";
-import { Panel } from "react-bootstrap";
+import React from 'react';
+import { Panel } from 'react-bootstrap';
 
 const Accordion = ({ eventKey, title, items }) => {
   const renderedItems = items.map((item, i) => <div key={i}>{item}</div>);

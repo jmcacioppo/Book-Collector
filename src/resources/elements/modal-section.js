@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import React from 'react';
+import { Button, Modal } from 'react-bootstrap';
 
 class ModalSection extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class ModalSection extends React.Component {
     this.handleAction = this.handleAction.bind(this);
 
     this.state = {
-      show: false
+      show: false,
     };
   }
 

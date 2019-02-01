@@ -18,7 +18,7 @@ class BooksList extends React.Component {
   }
 
   render() {
-    return <div className="BooksContainer">{this.state.bookItems}</div>;
+    return <div className="flex flex--space-evenly">{this.state.bookItems}</div>;
   }
 }
 

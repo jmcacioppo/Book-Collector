@@ -1,13 +1,13 @@
-@import "./constants/colors.scss";
-.MainTitle {
+@import './constants/colors.scss';
+.app__header {
   color: $primary-text-color;
   margin-top: 10px;
 }
 
-.SectionTitle {
+.section__header {
   color: $primary-text-color;
 }
 
-.TextCenter {
+.text-center {
   text-align: center;
 }
